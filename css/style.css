@@ -1,0 +1,13 @@
+body
+{
+    background-color: #24353f;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+*
+{
+    color: white;
+}
+#updateBtn
+{
+    display: none;
+}

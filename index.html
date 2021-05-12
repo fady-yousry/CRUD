@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="discription"
+        content="This App to create data that will be stored in local storage that you can retrieve , update , delete this data ">
+    <meta name="Author" content="Fady Yousry">
+    <title>Crud App</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1 class="header my-2 text-center text-info font-weight-bold display-4">CRUD App</h1>
+    <h6 class="text-center text-info">"Create / Retrieve / Update / Delete"</h6>
+    <div class="container pt-2">
+        <div class="form-group">
+            <label for="productNameInput">Product Name</label>
+            <input class="form-control" type="text" id="productNameInput" required>
+            <span id="productNameAlert" class="text-danger d-none text-bolder">*product name must start with upperCase
+                and then from 3 to 10 characters.</span>
+        </div>
+        <div class="form-group">
+            <label for="productPriceInput">Product Price</label>
+            <input class="form-control" type="text" id="productPriceInput" required>
+            <span id="productPriceAlert" class="text-danger d-none">*Please enter from 2 to 6 numbers. </span>
+        </div>
+        <div class="form-group">
+            <label for="productCategoryInput">Product Category</label>
+            <input class="form-control" type="text" id="productCategoryInput" required>
+            <span id="productCategoryAlert" class="text-danger d-none">*Product category must contain ( Min : 3
+                characters , Max : 15 characters).</span>
+        </div>
+        <div class="form-group">
+            <label for="productDescInput">Product Decription</label>
+            <textarea id="productDescInput" class="form-control" required></textarea>
+            <span id="productDescAlert" class="text-danger d-none">*Description must contain ( Min : 3 , Max : 100 )
+                characters/numbers.</span>
+        </div>
+        <div class=" mt-5">
+            <button class="btn btn-info btn-lg btn-block w-50 m-auto" id="submitBtn">Add Product</button>
+            <button class="btn btn-warning btn-lg btn-block w-50 m-auto" id="updateBtn">Update</button>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="input-group mb-3 w-75 m-auto">
+            <input onkeyup="searchProduct(this.value)" class="form-control w-75 m-auto"
+                placeholder="Search By Product Name / Price / Category" type="text">
+            <button class="btn btn-outline-secondary"><i class="fas fa-search"></i></button>
+        </div>
+        <table class="table mt-5">
+            <thead>
+                <th>Index</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
